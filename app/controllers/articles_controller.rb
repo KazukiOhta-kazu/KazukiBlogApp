@@ -6,6 +6,7 @@ class ArticlesController < ApplicationController
   end
 
   def show
+    raise StandardError
   end
 
   def new
