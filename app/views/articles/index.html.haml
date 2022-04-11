@@ -18,7 +18,7 @@
           .card_detail
             = image_tag 'default-avatar.png'
             %div
-              %p cohki0305
+              %p= article.author_name
               %p= article.display_created_at
   = link_to new_article_path do
     .float_btn
