@@ -5,21 +5,7 @@
     .tabs_item
       タイムライン
   - @articles.each do |article|
-    = link_to article_path(article) do
-      .card
-        .card_image
-          = image_tag 'eyecatch1.png'
-        .card_content
-          .card_title
-            = article.title
-          .card_heart
-            = image_tag 'heart.svg'
-            %span 23
-          .card_detail
-            = image_tag 'default-avatar.png'
-            %div
-              %p= article.author_name
-              %p= article.display_created_at
+    = render 'commons/article', article: article
   = link_to new_article_path do
     .float_btn
       %i.fa.fa-plus
