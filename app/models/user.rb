@@ -48,7 +48,7 @@ class User < ApplicationRecord
   def avatar_image
     if profile&.avatar&.attached?
       profile.avatar
-    else 
+    else
       'default-avatar.png'
     end
   end
