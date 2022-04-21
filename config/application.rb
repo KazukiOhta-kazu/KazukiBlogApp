@@ -6,8 +6,10 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-Bundler.require(*Rails.groups)
-Dotenv::Railtie.load
+if Rails.env.development? || Rails.env.test?
+  Bundler.require(*Rails.groups)
+  Dotenv::Railtie.load
+end
 
 module BlogApp
   class Application < Rails::Application
