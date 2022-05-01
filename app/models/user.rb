@@ -36,8 +36,8 @@ class User < ApplicationRecord
 
   delegate :age, :gender, to: :profile, allow_nil: true
 
-  def follow!(user)
-    following_relationships.create!(following_id: user.id)
+  def follow!(user_id)
+    following_relationships.create!(following_id: user_id)
   end
 
   def unfollow!(user)
@@ -55,6 +55,10 @@ class User < ApplicationRecord
 
   def display_name
     profile&.nickname || self.email.split('@').first
+  end
+
+  def has_followed?(user)
+    following_relationships.exists?(following_id: user.id)
   end
 
   def prepare_profile
