@@ -1,9 +1,9 @@
 .container
   .tabs
     .tabs_item.active
-      新着記事一覧
+      = link_to '新着記事一覧', root_path
     .tabs_item
-      タイムライン
+      = link_to 'タイムライン', timeline_path
   - @articles.each do |article|
     = render 'commons/article', article: article
   = link_to new_article_path do
