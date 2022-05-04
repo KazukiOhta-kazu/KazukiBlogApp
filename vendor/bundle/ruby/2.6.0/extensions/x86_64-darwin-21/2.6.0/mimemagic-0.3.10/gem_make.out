@@ -1,3 +1,0 @@
-current directory: /Users/kazukiohta/App/blog-app/vendor/bundle/ruby/2.6.0/gems/mimemagic-0.3.10/ext/mimemagic
-/Users/kazukiohta/.rbenv/versions/2.6.9/bin/ruby -rrubygems /Users/kazukiohta/App/blog-app/vendor/bundle/ruby/2.6.0/gems/rake-13.0.6/exe/rake RUBYARCHDIR\=/Users/kazukiohta/App/blog-app/vendor/bundle/ruby/2.6.0/extensions/x86_64-darwin-21/2.6.0/mimemagic-0.3.10 RUBYLIBDIR\=/Users/kazukiohta/App/blog-app/vendor/bundle/ruby/2.6.0/extensions/x86_64-darwin-21/2.6.0/mimemagic-0.3.10
-mkdir -p /Users/kazukiohta/App/blog-app/vendor/bundle/ruby/2.6.0/extensions/x86_64-darwin-21/2.6.0/mimemagic-0.3.10/mimemagic
