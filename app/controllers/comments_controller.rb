@@ -1,18 +1,17 @@
 class CommentsController < ApplicationController
-  def new
+  def index
     article = Article.find(params[:article_id])
-    @comment = article.comments.build
+    comments = article.comments
+
+    render json: comments
   end
 
   def create
     article = Article.find(params[:article_id])
-    @comment = article.comments.build(comment_params)
-    if @comment.save
-      redirect_to article_path(article), notice: '保存しました'
-    else
-      flash.now[:error] = '保存に失敗しました'
-      render :new
-    end
+    comment = article.comments.build(comment_params)
+    comment.save!
+
+    render json: comment
   end
 
   private
