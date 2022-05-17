@@ -11,7 +11,7 @@ label {
   font-size: 12px;
 }
 
-textarea, trix-editor {
+textarea {
   width: 100%;
   margin: 8px 0px;
   padding: 8px 8px;
@@ -22,8 +22,4 @@ textarea, trix-editor {
   &.sm {
     min-height: 160px;
   }
-}
-
-trix-editor {
-  background-color: #fff;
 }
