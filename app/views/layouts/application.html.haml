@@ -12,7 +12,7 @@
   %body
     %header.header
       .header_logos
-        - if !current_page?(root_path)
+        - if !current_page?('/') && !current_page?('/timeline')
           = link_to :back do
             = image_tag 'back.svg', class: 'header_back'
         %p.header_pageTitle
@@ -31,3 +31,4 @@
         - flash.each do |key, value|
           %div{:class => key}= value
     = yield
+    = render 'layouts/footer'
