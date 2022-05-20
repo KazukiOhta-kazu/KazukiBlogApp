@@ -1,5 +1,7 @@
 .tabs
   .tabs_item{class: "#{add_active_class('/')}"}
-    = link_to '新着記事一覧', root_path
+    = link_to root_path do
+      = t 'index.new_articles'
   .tabs_item{class: "#{add_active_class('/timeline')}"}
-    = link_to 'タイムライン', timeline_path
+    = link_to timeline_path do 
+      = t 'index.timeline'
