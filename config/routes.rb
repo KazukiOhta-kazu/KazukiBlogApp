@@ -7,15 +7,15 @@ Rails.application.routes.draw do
 
   resources :articles
 
-  resource :timeline, only: [:show]
-
-  resource :profile, only: [:show, :edit, :update]
-
-  resources :favorites, only: [:index]
-
   resources :accounts, only: [:show] do
     resources :follows, only: [:create]
     resources :unfollows, only: [:create]
+  end
+
+  scope module: :apps do
+    resources :favorites, only: [:index]
+    resource :profile, only: [:show, :edit, :update]
+    resource :timeline, only: [:show]
   end
 
   namespace :api, defaults: {format: :json} do
