@@ -1,12 +1,12 @@
 require 'rails_helper'
 
-RSpec.describe "Api::Comments", type: :request do
+RSpec.describe 'Api::Comment', type: :request do
   let!(:user) { create(:user) }
   let!(:article) { create(:article, user: user) }
   let!(:comments) { create_list(:comment, 3, article: article) }
 
-  describe "GET /api/comments" do
-    it "Return status 200" do
+  describe 'GET /api/comments' do
+    it 'Return status 200' do
       get api_comments_path(article_id: article.id)
       expect(response).to have_http_status(200)
 
