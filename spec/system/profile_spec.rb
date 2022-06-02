@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "Profiles", type: :system do
+RSpec.describe 'Profile', type: :system do
   let!(:user) { create(:user, :with_profile) }
 
   context 'ログインしている場合' do
