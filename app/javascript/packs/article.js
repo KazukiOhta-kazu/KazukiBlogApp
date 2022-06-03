@@ -5,6 +5,15 @@ import {
   listenActiveHeartEvent
 } from 'modules/handle_heart'
 
+function escapeHtml(str) {
+  str = str.replace(/&/g, '&amp;');
+  str = str.replace(/</g, '&lt;');
+  str = str.replace(/>/g, '&gt;');
+  str = str.replace(/"/g, '&quot;');
+  str = str.replace(/'/g, '&#39;');
+  return str;
+}
+
 const handleHeartDisplay = (hasLiked) => {
   if (hasLiked) {
     $('.active-heart').removeClass('hidden')
@@ -22,7 +31,7 @@ const handleCommentForm = () => {
 
 const appendNewComment = (comment) => {
   $('.comments-container').append(
-    `<div class='article_comment'><p>${comment.content}</p></div>`
+    `<div class='article_comment'><p>${escapeHtml(comment.content)}</p></div>`
   )
 }
 
